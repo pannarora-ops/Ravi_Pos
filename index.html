@@ -1,146 +1,140 @@
-﻿
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>Ravi Confectionery - Online Store</title>
-            <style>
-                body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; padding: 20px; margin: 0; }
-                .modal { display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
-                .modal-content { background: white; margin: 10% auto; padding: 20px; border-radius: 8px; width: 350px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-                input, select, textarea { width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-                .btn { background: #25d366; color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 14px; }
-                .close { float: right; font-size: 20px; font-weight: bold; cursor: pointer; color: #888; }
-            </style>
-        </head>
-        <body>
-            <div style="text-align: center;">
-                <h1>ðŸª Ravi Confectionery</h1>
-                <p>Shop No. 10, Shopping Complex, NAPS Township, Narora | Phone: 8958443816 | WhatsApp: 919758203389</p>
-                <hr style="width: 50%; border: 0; border-top: 1px solid #ccc;">
-            </div>
-            <h2 style="text-align: center; color: #444;">Available Products (à¤²à¤¾à¤‡à¤µ à¤¸à¥à¤Ÿà¥‰à¤•):</h2>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-                
-            <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 10px; width: 220px; display: inline-block; background: white; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h3 style="margin-bottom: 5px; color: #333;">Cadbury Dairy Milk 50g</h3>
-                <p style="color: #107c41; font-weight: bold; font-size: 16px;">â‚¹ 45.00 / BOX</p>
-                <p style="color: gray; font-size: 12px;">à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¸à¥à¤Ÿà¥‰à¤•: 120.0 BOX</p>
-                <button onclick="openCheckout('Cadbury Dairy Milk 50g', 45.0, 'BOX')" style="background: #107c41; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold;">Order Now</button>
-            </div>
-            
-            <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 10px; width: 220px; display: inline-block; background: white; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h3 style="margin-bottom: 5px; color: #333;">Britannia Good Day</h3>
-                <p style="color: #107c41; font-weight: bold; font-size: 16px;">â‚¹ 20.00 / CARTON</p>
-                <p style="color: gray; font-size: 12px;">à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¸à¥à¤Ÿà¥‰à¤•: 48.0 CARTON</p>
-                <button onclick="openCheckout('Britannia Good Day', 20.0, 'CARTON')" style="background: #107c41; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold;">Order Now</button>
-            </div>
-            
-            <div style="border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 10px; width: 220px; display: inline-block; background: white; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <h3 style="margin-bottom: 5px; color: #333;">Fresh Cream Cake (Vanilla)</h3>
-                <p style="color: #107c41; font-weight: bold; font-size: 16px;">â‚¹ 350.00 / BOX</p>
-                <p style="color: gray; font-size: 12px;">à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¸à¥à¤Ÿà¥‰à¤•: 10.0 BOX</p>
-                <button onclick="openCheckout('Fresh Cream Cake (Vanilla)', 350.0, 'BOX')" style="background: #107c41; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold;">Order Now</button>
-            </div>
-            
-            </div>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravi Confectionery - Online Store</title>
+<style>
+body{font-family:"Segoe UI",Arial,sans-serif;background:#f4f6f9;margin:0;padding:20px;color:#222}
+.header{text-align:center}.header h1{margin:5px 0}.products{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.product{border:1px solid #ddd;border-radius:10px;padding:16px;margin:6px;width:230px;background:#fff;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.price{color:#107c41;font-weight:bold;font-size:18px}.stock{color:#666;font-size:13px}.order-btn{background:#107c41;color:#fff;border:0;padding:9px 16px;border-radius:5px;cursor:pointer;font-weight:bold}
+.modal{display:none;position:fixed;z-index:10;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.5)}
+.modal-content{background:#fff;margin:7% auto;padding:20px;border-radius:10px;width:360px;max-width:90%;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+input,select,textarea{width:100%;padding:9px;margin:7px 0;border:1px solid #ccc;border-radius:5px;box-sizing:border-box}
+.btn{background:#25d366;color:#fff;border:0;padding:12px;width:100%;border-radius:5px;font-weight:bold;cursor:pointer;font-size:14px}
+.close{float:right;font-size:22px;font-weight:bold;cursor:pointer;color:#888}
+.message{text-align:center;font-weight:bold;margin:15px}
+.empty{text-align:center;width:100%;padding:30px;color:#777}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🛍️ Ravi Confectionery</h1>
+<p>Shop No. 10, Shopping Complex, NAPS Township, Narora<br>
+Phone: 8958443816 | WhatsApp: 919758203389</p>
+<hr style="width:50%;border:0;border-top:1px solid #ccc">
+</div>
 
-            <!-- Checkout Modal -->
-            <div id="checkoutModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeCheckout()">&times;</span>
-                    <h3>ðŸ›ï¸ Complete Your Order</h3>
-                    <p id="prodInfo" style="font-weight: bold; color: #0078d4;"></p>
-                    <label>à¤®à¤¾à¤¤à¥à¤°à¤¾ (Quantity):</label>
-                    <input type="number" id="prodQty" value="1" min="1" oninput="calcTotal()" style="font-weight:bold;">
-                    <input type="text" id="custName" placeholder="à¤†à¤ªà¤•à¤¾ à¤ªà¥‚à¤°à¤¾ à¤¨à¤¾à¤® (Full Name)" required>
-                    <input type="text" id="custPhone" placeholder="à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° (Mobile Number)" required>
-                    <textarea id="custAddr" placeholder="à¤ªà¥‚à¤°à¤¾ à¤¡à¤¿à¤²à¥€à¤µà¤°à¥€ à¤ªà¤¤à¤¾ (Delivery Address)" style="height:60px;" required></textarea>
-                    <input type="text" id="couponCode" placeholder="à¤•à¥‚à¤ªà¤¨ à¤•à¥‹à¤¡ (à¤¯à¤¦à¤¿ à¤¹à¥‹ à¤¤à¥‹ à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚)">
-                    <select id="payMode">
-                        <option value="UPI">UPI QR Payment</option>
-                        <option value="COD">Cash on Delivery (COD)</option>
-                    </select>
-                    <p id="totalDisplay" style="font-weight:bold; color:#107c41; text-align:center; font-size:16px;"></p>
-                    <button class="btn" onclick="submitOrderToWhatsApp()">ðŸ’¬ Send Order via WhatsApp</button>
-                </div>
-            </div>
+<h2 style="text-align:center;color:#444">Available Products (लाइव स्टॉक)</h2>
+<div id="products" class="products"><div class="empty">Products load हो रहे हैं...</div></div>
 
-            <script>
-                let selectedProduct = "";
-                let unitPrice = 0;
-                let unitName = "";
-                let shopWhatsApp = "919758203389";
+<div id="checkoutModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeCheckout()">&times;</span>
+<h3>🛒 अपना ऑर्डर पूरा करें</h3>
+<p id="prodInfo" style="font-weight:bold;color:#0078d4"></p>
+<label>मात्रा (Quantity):</label>
+<input type="number" id="prodQty" value="1" min="1" oninput="calcTotal()">
+<input type="text" id="custName" placeholder="अपना पूरा नाम (Full Name)">
+<input type="text" id="custPhone" placeholder="मोबाइल नंबर (Mobile Number)">
+<textarea id="custAddr" placeholder="पूरा डिलीवरी पता (Delivery Address)" style="height:70px"></textarea>
+<input type="text" id="couponCode" placeholder="कूपन कोड (यदि हो तो)">
+<select id="payMode"><option value="UPI">UPI QR Payment</option><option value="COD">Cash on Delivery (COD)</option></select>
+<p id="totalDisplay" style="font-weight:bold;color:#107c41;text-align:center;font-size:17px"></p>
+<button class="btn" onclick="submitOrder()">📲 WhatsApp पर ऑर्डर भेजें</button>
+<p id="status" class="message"></p>
+</div>
+</div>
 
-                function openCheckout(name, price, unit) {
-                    selectedProduct = name;
-                    unitPrice = price;
-                    unitName = unit;
-                    document.getElementById("prodQty").value = 1;
-                    document.getElementById("prodInfo").innerText = selectedProduct + " - â‚¹" + price + " / " + unitName;
-                    calcTotal();
-                    document.getElementById("checkoutModal").style.display = "block";
-                }
+<script>
+const API_BASE="https://ravi-pos-api.onrender.com";
+const shopWhatsApp="919758203389";
+let selectedProduct=null;
 
-                function calcTotal() {
-                    let qty = document.getElementById("prodQty").value || 1;
-                    let tot = qty * unitPrice;
-                    document.getElementById("totalDisplay").innerText = "Total Payable: â‚¹ " + tot.toFixed(2);
-                }
-
-                function closeCheckout() {
-                    document.getElementById("checkoutModal").style.display = "none";
-                }
-
-                function submitOrderToWhatsApp() {
-                    let name = document.getElementById("custName").value;
-                    let phone = document.getElementById("custPhone").value;
-                    let addr = document.getElementById("custAddr").value;
-                    let qty = document.getElementById("prodQty").value;
-                    let coupon = document.getElementById("couponCode").value;
-                    let mode = document.getElementById("payMode").value;
-                    let tot = qty * unitPrice;
-                    
-                    if(!name || !phone || !addr) {
-                        alert("à¤•à¥ƒà¤ªà¤¯à¤¾ à¤¨à¤¾à¤®, à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° à¤”à¤° à¤ªà¤¤à¤¾ à¤…à¤µà¤¶à¥à¤¯ à¤­à¤°à¥‡à¤‚!");
-                        return;
-                    }
-
-                    let orderSummary = selectedProduct + " x " + qty + " " + unitName;
-
-                    // à¤‘à¤Ÿà¥‹à¤®à¥ˆà¤Ÿà¤¿à¤• à¤¡à¥‡à¤Ÿà¤¾à¤¬à¥‡à¤¸ à¤¸à¤¿à¤‚à¤• à¤•à¥‡ à¤²à¤¿à¤ à¤à¤¨à¤—à¥à¤°à¥‹à¤• à¤²à¤¿à¤‚à¤• (cÃ´de à¤®à¥‡à¤‚ à¤‡à¤¨à¤¬à¤¿à¤²à¥à¤Ÿ)
-                    let apiURL = "https://ravi-pos-api.onrender.com/api/save_order";
-                    
-                    fetch(apiURL, {
-                        method: 'POST',
-                        
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            name: name,
-                            phone: phone,
-                            address: addr,
-                            items: orderSummary,
-                            total: tot,
-                            mode: mode
-                        })
-                    }).catch(err => console.log("Sync error:", err));
-
-                    let msg = "ðŸ“¦ *à¤¨à¤¯à¤¾ à¤‘à¤¨à¤²à¤¾à¤‡à¤¨ à¤‘à¤°à¥à¤¡à¤° à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤¹à¥à¤†!*\n\n" +
-                              "*à¤—à¥à¤°à¤¾à¤¹à¤• à¤•à¤¾ à¤¨à¤¾à¤®:* " + name + "\n" +
-                              "*à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°:* " + phone + "\n" +
-                              "*à¤¡à¤¿à¤²à¥€à¤µà¤°à¥€ à¤ªà¤¤à¤¾:* " + addr + "\n" +
-                              "*à¤†à¤‡à¤Ÿà¤® à¤µà¤¿à¤µà¤°à¤£:* " + orderSummary + "\n" +
-                              "*à¤•à¥‚à¤ªà¤¨ à¤•à¥‹à¤¡:* " + (coupon ? coupon : "à¤²à¤¾à¤—à¥‚ à¤¨à¤¹à¥€à¤‚") + "\n" +
-                              "*à¤•à¥à¤² à¤°à¤¾à¤¶à¤¿:* â‚¹" + tot.toFixed(2) + "\n" +
-                              "*à¤­à¥à¤—à¤¤à¤¾à¤¨ à¤•à¤¾ à¤¤à¤°à¥€à¤•à¤¾:* " + mode;
-                    
-                    let waUrl = "https://wa.me/" + shopWhatsApp + "?text=" + encodeURIComponent(msg);
-                    window.open(waUrl, "_blank");
-                    closeCheckout();
-                }
-            </script>
-        </body>
-        </html>
-        
-
-
+async function loadProducts(){
+ const box=document.getElementById("products");
+ try{
+   const response=await fetch(API_BASE+"/api/products",{cache:"no-store"});
+   const data=await response.json();
+   if(!response.ok) throw new Error(data.message||"Products load failed");
+   const products=data.products||[];
+   if(!products.length){
+     box.innerHTML='<div class="empty">अभी कोई Active Product उपलब्ध नहीं है।</div>';
+     return;
+   }
+   box.innerHTML=products.map(p=>{
+     const stock=Number(p.stock||0);
+     const rate=Number(p.sale_rate||0);
+     const unit=p.primary_unit||"UNIT";
+     const safeName=String(p.name).replace(/'/g,"&#39;");
+     return `<div class="product">
+       <h3>${escapeHtml(p.name)}</h3>
+       <p class="price">₹${rate.toFixed(2)} / ${escapeHtml(unit)}</p>
+       <p class="stock">उपलब्ध स्टॉक: ${stock} ${escapeHtml(unit)}</p>
+       <button class="order-btn" onclick="openCheckout(${JSON.stringify(String(p.name))},${rate},${JSON.stringify(unit)},${stock})">Order Now</button>
+     </div>`;
+   }).join("");
+ }catch(e){
+   console.error(e);
+   box.innerHTML='<div class="empty">Products load नहीं हो पाए। कृपया थोड़ी देर बाद फिर प्रयास करें।</div>';
+ }
+}
+function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function openCheckout(name,price,unit,stock){
+ selectedProduct={name,price,unit,stock};
+ document.getElementById("prodQty").value=1;
+ document.getElementById("prodInfo").innerText=name+" - ₹"+price.toFixed(2)+" / "+unit;
+ calcTotal();
+ document.getElementById("checkoutModal").style.display="block";
+}
+function calcTotal(){
+ if(!selectedProduct)return;
+ const qty=Math.max(1,Number(document.getElementById("prodQty").value)||1);
+ document.getElementById("totalDisplay").innerText="कुल भुगतान: ₹"+(qty*selectedProduct.price).toFixed(2);
+}
+function closeCheckout(){document.getElementById("checkoutModal").style.display="none";document.getElementById("status").innerText="";}
+async function submitOrder(){
+ const name=document.getElementById("custName").value.trim();
+ const phone=document.getElementById("custPhone").value.trim();
+ const addr=document.getElementById("custAddr").value.trim();
+ const coupon=document.getElementById("couponCode").value.trim();
+ const mode=document.getElementById("payMode").value;
+ const qty=Math.max(1,Number(document.getElementById("prodQty").value)||1);
+ if(!name||!phone||!addr){alert("कृपया नाम, मोबाइल नंबर और पूरा पता भरें!");return;}
+ if(qty>(Number(selectedProduct.stock)||0)){alert("इतना stock उपलब्ध नहीं है।");return;}
+ const total=qty*selectedProduct.price;
+ const items=selectedProduct.name+" x "+qty+" "+selectedProduct.unit;
+ document.getElementById("status").innerText="ऑर्डर भेजा जा रहा है...";
+ try{
+   const response=await fetch(API_BASE+"/api/save_order",{
+     method:"POST",
+     headers:{"Content-Type":"application/json"},
+     body:JSON.stringify({name,phone,address:addr,items,total,mode})
+   });
+   const result=await response.json();
+   if(!response.ok)throw new Error(result.message||"Order save failed");
+   const msg="📦 *नया ऑनलाइन ऑर्डर*\\n\\n"+
+     "*ऑर्डर ID:* "+(result.order_id||"")+
+     "\\n*ग्राहक का नाम:* "+name+
+     "\\n*मोबाइल नंबर:* "+phone+
+     "\\n*डिलीवरी पता:* "+addr+
+     "\\n*आइटम:* "+items+
+     "\\n*कूपन:* "+(coupon||"कोई नहीं")+
+     "\\n*कुल राशि:* ₹"+total.toFixed(2)+
+     "\\n*भुगतान:* "+mode;
+   window.open("https://wa.me/"+shopWhatsApp+"?text="+encodeURIComponent(msg),"_blank");
+   alert("ऑर्डर सफलतापूर्वक दर्ज हो गया।");
+   closeCheckout();
+ }catch(e){
+   console.error(e);
+   document.getElementById("status").innerText="❌ Order Cloud में save नहीं हुआ।";
+   alert("ऑर्डर Cloud में save नहीं हुआ। कृपया दोबारा प्रयास करें।");
+ }
+}
+window.onclick=e=>{if(e.target===document.getElementById("checkoutModal"))closeCheckout();}
+loadProducts();
+setInterval(loadProducts,30000);
+</script>
+</body>
+</html>
